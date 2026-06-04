@@ -1,0 +1,152 @@
+@media (max-width : 366px) {
+
+
+    /* header qismi */
+    .commond-div {
+        max-width: 366px;
+        height: auto;
+
+
+    }
+
+
+    header {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(127, 255, 212, 0.31);
+    }
+
+    .icon-header {
+        min-width: max-content;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        text-align: center;
+
+
+
+        >p {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .h-colgroup {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        >i:nth-child(2) {
+            color: rgb(0, 162, 255);
+        }
+
+        >i:nth-child(1) {
+            color: rgb(206, 79, 79);
+        }
+
+
+
+    }
+
+
+
+
+    /* nav qismi */
+
+    .componiya {
+        min-height: max-content;
+        background-color: rgb(157, 157, 157);
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0 10px 0;
+        overflow-x: scroll;
+        gap: 10px;
+        padding-left: 0px;
+        min-width: 365px;
+    }
+
+    .componiya-1 {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(255, 255, 255);
+        margin: 0 5px 0 5px;
+
+
+
+
+        >img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+
+
+        }
+    }
+
+
+
+    /*  main */
+
+    main {
+        width: 100%;
+        min-height: max-content;
+        background-color: aquamarine;
+
+    }
+
+    .main-data-section {
+        width: 80%;
+        min-height: max-content;
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-top: 15px;
+        margin: auto;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 20px;
+
+
+    }
+
+    .m-d-section-1 {
+        width: 110px;
+        height: 80px;
+        border-radius: 15px;
+        padding: 10px;
+        
+
+        >i{
+         font-size: 30px;
+         margin-left: 35px;
+         margin-top: 10px;
+        }
+
+        >p{
+            font-size: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            text-align: center;
+            overflow-x: hidden;
+            margin-top: 5px;
+            background-color: blue;
+
+        }
+    }
+
+
+
+}
