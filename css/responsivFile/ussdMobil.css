@@ -11,11 +11,14 @@
 
 
     header {
-        width: 100%;
+        width: 365px;
         height: 40px;
         display: flex;
         justify-content: space-between;
-        background-color: rgba(127, 255, 212, 0.31);
+        background-color: rgb(87, 108, 101);
+        position: fixed;
+        top: 0;
+
     }
 
     .icon-header {
@@ -63,6 +66,8 @@
     /* nav qismi */
 
     .componiya {
+        position: fixed;
+        top: 0;
         min-height: max-content;
         background-color: rgb(157, 157, 157);
         display: flex;
@@ -72,15 +77,23 @@
         gap: 10px;
         padding-left: 0px;
         min-width: 365px;
+       
+         position: fixed;
+        top: 40px; 
+
     }
 
+
     .componiya-1 {
+       
+        top: 0;
         min-width: 40px;
         min-height: 40px;
         padding: 10px;
         border-radius: 100%;
         background-color: rgb(255, 255, 255);
         margin: 0 5px 0 5px;
+
 
 
 
@@ -99,9 +112,10 @@
     /*  main */
 
     main {
-        width: 100%;
+        width: 365px;
         min-height: max-content;
         background-color: aquamarine;
+        margin-top: 125px;
 
     }
 
@@ -152,20 +166,41 @@
 
     footer {
         width: 100%;
-        min-height: max-content;
+        height: 60px;
         background-color: cadetblue;
     }
 
     .footer-info {
-        width: 100%;
-        height: auto;
+        width: 363px;
+        height:40px;
         display: flex;
         justify-content: space-around;
         padding: 10px 0 10px 0;
+        margin-left: 0;
+        
 
-color: red;
-        >.f-info{
+        color: red;
+
+
+        >.f-info:nth-of-type(3) {
+            width: 50px;
+            height: 50px;
             color: red;
+            border: 5px solid rgb(255, 255, 255);
+            position: relative;
+            top: -35px;
+            padding: 5px;
+            border-radius: 100%;
+            background-color: rgb(62, 153, 233);
+            
+
+            >i {
+                font-size: 30px;
+                margin-left: 6px;
+                margin-top: 8px;
+            }
+
+
         }
 
     }
@@ -173,7 +208,7 @@ color: red;
 
     .f-info {
         width: 50px;
-        min-height: max-content;
+        height: 40px;
 
 
 
@@ -181,6 +216,7 @@ color: red;
             font-size: 16px;
             margin-left: 15px;
             color: rgb(37, 37, 37);
+
         }
 
         >p {
@@ -190,11 +226,8 @@ color: red;
             font-weight: 400;
             color: black;
 
-
-
         }
 
-       
 
 
 
