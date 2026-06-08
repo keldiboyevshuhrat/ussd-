@@ -5,13 +5,14 @@
     .commond-div {
         max-width: 366px;
         height: auto;
+        margin-left: -1px;
 
 
     }
 
 
     header {
-        width: 365px;
+        width: 366px;
         height: 40px;
         display: flex;
         justify-content: space-between;
@@ -47,15 +48,27 @@
         font-weight: 600;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-
-        >i:nth-child(2) {
-            color: rgb(0, 162, 255);
+        a {
+            color: black;
         }
 
-        >i:nth-child(1) {
-            color: rgb(206, 79, 79);
+
+        a:nth-child(2) {
+            >i {
+                color: rgb(0, 162, 255);
+            }
+
+
+
+
+
         }
 
+        a:nth-child(1) {
+            >i {
+                color: rgb(206, 79, 79);
+            }
+        }
 
 
     }
@@ -65,8 +78,14 @@
 
     /* nav qismi */
 
+
+    nav {
+        position: sticky;
+        top: 40px;
+    }
+
     .componiya {
-        position: fixed;
+        width: 364px;
         top: 0;
         min-height: max-content;
         background-color: rgb(157, 157, 157);
@@ -75,17 +94,13 @@
         padding: 10px 0 10px 0;
         overflow-x: scroll;
         gap: 10px;
-        padding-left: 0px;
-        min-width: 365px;
-       
-         position: fixed;
-        top: 40px; 
 
+        top: 40px;
     }
 
 
     .componiya-1 {
-       
+
         top: 0;
         min-width: 40px;
         min-height: 40px;
@@ -112,10 +127,11 @@
     /*  main */
 
     main {
-        width: 365px;
+        width: 366px;
         min-height: max-content;
         background-color: aquamarine;
-        margin-top: 125px;
+        margin-top: 38px;
+        padding-bottom: 100px;
 
     }
 
@@ -138,6 +154,8 @@
         height: 80px;
         border-radius: 15px;
         padding: 10px;
+        border: 1px solid black;
+        background-color: rgb(95, 95, 228);
 
 
         >i {
@@ -162,22 +180,50 @@
     }
 
 
+
+    .main-restart-section {
+        width: max-content;
+        height: max-content;
+        padding: 7px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+   margin: auto;
+        
+
+
+        >i {
+            font-size: 12px;
+        }
+
+        >p {
+            font-family: var(--text-font-min);
+            font-size: 12px;
+            font-weight: 600;
+            padding-left: 10px;
+
+        }
+    }
+
+
     /* footer*/
 
     footer {
         width: 100%;
         height: 60px;
         background-color: cadetblue;
+        position: fixed;
+        bottom: 0px;
     }
 
     .footer-info {
         width: 363px;
-        height:40px;
+        height: 40px;
         display: flex;
         justify-content: space-around;
         padding: 10px 0 10px 0;
         margin-left: 0;
-        
+
 
         color: red;
 
@@ -192,7 +238,7 @@
             padding: 5px;
             border-radius: 100%;
             background-color: rgb(62, 153, 233);
-            
+
 
             >i {
                 font-size: 30px;
