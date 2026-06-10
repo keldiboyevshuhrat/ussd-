@@ -3,4 +3,6 @@
 @import url(additionalCss/helpers.css);
 @import url(responsivFile/ussdMobil.css);
 @import url(./mainCss/mainDataSectionsCss/mainDataSectionsCss.css);
+@import url(/css/additionalCss/root.css);
+@import url(./mainCss/mainDataSectionsCss/mainDataSectionsTarif.css);
 

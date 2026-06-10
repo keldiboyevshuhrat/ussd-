@@ -1,0 +1,81 @@
+@media (max-width: 366px) {
+
+
+    .m-d-s-tariflar {
+        width: 350px;
+        height: max-content;
+        margin: auto;
+        padding-top: 35px;
+        padding-bottom: 160px;
+        background-color: rgb(65, 127, 149);
+
+    }
+
+    .m-d-s-t {
+        width: 85%;
+        height: max-content;
+        padding: 10px;
+        margin: auto;
+        border: 1px solid black;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .m-d-s-t-1 {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+
+
+        >h3 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        >i {
+            font-size: 20px;
+            color: rgb(45, 42, 42);
+
+        }
+
+        >i:active {
+            transform: rotate(45deg);
+            color: blue;
+        }
+
+    }
+
+
+
+
+
+    .m-d-s-t-2 {
+        width: 100%;
+        height: max-content;
+
+        padding: 5px 0;
+    }
+
+    .m-d-s-t-2-exchange {
+        width: max-content;
+        height: max-content;
+        padding: 5px 10px;
+        background-color: blue;
+        margin: auto;
+        margin-top: 25px;
+        border-radius: 5px;
+
+        >p {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: var(--text-font-max);
+        }
+    }
+
+
+}
