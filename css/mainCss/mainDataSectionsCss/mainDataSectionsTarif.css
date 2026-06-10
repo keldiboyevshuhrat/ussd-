@@ -8,17 +8,19 @@
         padding-top: 35px;
         padding-bottom: 160px;
         background-color: rgb(65, 127, 149);
+       
 
     }
 
     .m-d-s-t {
         width: 85%;
-        height: max-content;
+        height: 60px;
         padding: 10px;
         margin: auto;
         border: 1px solid black;
         margin-top: 15px;
         margin-bottom: 30px;
+        overflow: hidden;
     }
 
     .m-d-s-t-1 {
@@ -43,10 +45,7 @@
 
         }
 
-        >i:active {
-            transform: rotate(45deg);
-            color: blue;
-        }
+        
 
     }
 
@@ -69,6 +68,8 @@
         margin: auto;
         margin-top: 25px;
         border-radius: 5px;
+        
+       
 
         >p {
             font-size: 18px;
