@@ -1,0 +1,28 @@
+@media(max-width:366px) {
+
+
+    .m-d-s-language {
+        background-color: aqua;
+        width: 100%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+
+
+        >label {
+            width: 100%;
+            height: max-content;
+            background-color: blueviolet;
+            padding-bottom: 5px;
+            font-size: 18px;
+            font-family: var(--text-font-max);
+        }
+
+        >input {
+            width: 15px;
+            height: 15px;
+            margin-top: 5px;
+        }
+    }
+}

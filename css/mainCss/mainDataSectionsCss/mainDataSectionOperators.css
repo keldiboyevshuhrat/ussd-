@@ -1,0 +1,40 @@
+@media(max-width : 366px) {
+
+    .m-d-s-operator {
+        width: 100%;
+        height: max-content;
+        background-color: red;
+        margin-bottom: 30px;
+
+
+        >h5 {
+            width: fit-content;
+
+            height: max-content;
+            padding: 10px;
+
+        }
+
+        >p {
+            width: fit-content;
+            height: max-content;
+            background-color: aqua;
+            padding: 0 10px;
+
+
+        }
+
+        >h3{
+            width: fit-content;
+            height: max-content;
+            padding: 15px 10px;
+            text-align: center;
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+
+    }
+
+
+}
