@@ -12,19 +12,19 @@ export let componiyaData = [
     {
         componiyaName: "beeline",
         img: "../../../rasimlar/beline-nav-2.png",
-        colorB: "rgb(174, 186, 0)",
+        colorB: "rgb(227, 229, 63)",
         colorNavB : " rgb(237, 249, 73)",
     }
     , {
         componiyaName: "mobiuz",
         img: "../../../rasimlar/mobiuz-nav.png",
-        colorB: " rgb(146, 0, 0)",
+        colorB: " rgb(206, 0, 40)",
         colorNavB : "rgb(255, 70, 70)",
     }
     , {
         componiyaName: "usel",
         img: "../../../rasimlar/usel-nav.png",
-        colorB: " rgb(82, 0, 153)",
+        colorB: " rgb(130, 47, 253)",
         colorNavB : "rgb(158, 47, 255)",
     }
 
