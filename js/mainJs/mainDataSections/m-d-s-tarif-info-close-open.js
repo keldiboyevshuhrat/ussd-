@@ -3,14 +3,22 @@
 let m_d_s_t_1_icon = document.querySelectorAll(".m_d_s_t_1_icon");
 let m_d_s_t = document.querySelectorAll(".m-d-s-t");
 
-let isIconDeg = false
+let isIconDeg = false;
+let isOldIndex = 0;
 
-m_d_s_t_1_icon.forEach((item, i) => {
+m_d_s_t.forEach((item, i) => {
 
     item.addEventListener("click", () => {
 
+
+        if(isOldIndex != i){
+            isIconDeg = false;
+        }
+
+
+
         if (isIconDeg) {
-            item.style = `
+            m_d_s_t_1_icon[i].style = `
             transform: rotate(0deg);
             
             `
@@ -24,7 +32,7 @@ m_d_s_t_1_icon.forEach((item, i) => {
             isIconDeg = false;
 
         } else {
-            item.style = `
+            m_d_s_t_1_icon[i].style = `
             transform: rotate(50deg);
             
 
@@ -36,6 +44,7 @@ m_d_s_t_1_icon.forEach((item, i) => {
             
             `
             isIconDeg = true;
+            isOldIndex = i ;
         }
 
 
