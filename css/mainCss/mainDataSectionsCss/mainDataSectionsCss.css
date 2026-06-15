@@ -10,7 +10,7 @@
         background-color: rgb(0, 0, 253);
         display: flex;
         position: fixed;
-      
+
         z-index: 100;
 
 
@@ -54,14 +54,56 @@
             min-width: max-content;
             width: 100%;
             padding: 0 4px 0 4px;
-            color: blue;
-            border-bottom: 1px solid rgba(90, 90, 90, 0.418);
-
+            color: rgb(71, 71, 72);
+            border-bottom: 2px solid rgba(90, 90, 90, 0);
+            transition: 0.5s;
             text-align: center;
+            font-family: var(--text-font-max);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        >p:hover{
+            border-bottom: 2px solid green;
+            color: green;
+            transition: 0.5s;
         }
 
 
     }
+
+    .m-d-s-c-nav::-webkit-scrollbar {
+        height: 8px;
+        /* gorizontal */
+        width: 8px;
+        /* vertical */
+
+
+
+    }
+
+
+    .m-d-s-c-nav::-webkit-scrollbar-track {
+
+        background-color: #13174100;
+
+
+    }
+
+    .m-d-s-c-nav::-webkit-scrollbar-thumb {
+        background: rgba(60, 208, 60, 0);
+        /* scroll harakatlanuvchi qismi */
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,7 +122,7 @@
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
-        
+
 
 
     }
@@ -94,7 +136,7 @@
         align-items: center;
         border: 1px solid black;
 
-        >p{
+        >p {
             color: red;
             font-family: var(--text-font-min);
             font-weight: 600;
@@ -108,7 +150,7 @@
         height: 80%;
         border: 1px solid black;
         margin-top: 0;
-        padding: 5px ;
+        padding: 5px;
         border-radius: 5px;
 
     }
@@ -120,7 +162,7 @@
         justify-content: space-between;
         font-size: 12px;
         color: rgb(52, 52, 52);
-        font-family:var(--text-font-max);
+        font-family: var(--text-font-max);
         font-weight: 400;
 
     }
