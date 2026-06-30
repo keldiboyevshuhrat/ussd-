@@ -7,18 +7,18 @@ let mmainDataSectionClickMain01 = document.querySelector(".m-d-section-1");
 
 
 
-console.log(mainDataSection1);
-for (let i = 0; i < mainDataSection1.length; i++) {
+// console.log(mainDataSection1);
+// for (let i = 0; i < mainDataSection1.length; i++) {
 
 
-    mainDataSection1[i].addEventListener("click", () => {
+//     mainDataSection1[i].addEventListener("click", () => {
 
-        if (i == 0 || i == 2 || i == 4) {
-
-
-        }
+//         if (i == 0 || i == 2 || i == 4) {
 
 
-    })
+//         }
 
-}
+
+//     })
+
+// }

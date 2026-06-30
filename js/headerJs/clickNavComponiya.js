@@ -9,15 +9,15 @@ let headerLogoNameComponiya = document.querySelectorAll("#h-i-name");
 let mainDataSectionClick = document.querySelectorAll(".m-d-section-click");
 let mainDataSectionTarif2Exchange = document.querySelectorAll(".m-d-s-t-2-exchange");
 let colorTexts = document.querySelectorAll(".color-texts");
+let componiya = document.querySelector(".componiya");
 let onclickComponiya = document.querySelectorAll(".onclickComponiya");
 
-
 /// get data and glovnoyeObjComponiya
-import { glovnoyeObjComponiya } from "../data/glovnoyeObjComponiya.js";
+// import { glovnoyeObjComponiya } from "../data/glovnoyeObjComponiya.js";
 import { componiyaData } from "../data/componiyaData/componiyaData.js";
 
 
-let glovnoyeObjComponiya_1 = glovnoyeObjComponiya;
+navColors.style.backgroundColor = "red";
 
 
 
@@ -30,63 +30,9 @@ let glovnoyeObjComponiya_1 = glovnoyeObjComponiya;
 
 
 
-
-
-// if (navColors) {
-//     navColors.style.backgroundColor = glovnoyeObjComponiya_1.colorNavB;
-// }
-// if (footer1) {
-//     footer1.style.backgroundColor = glovnoyeObjComponiya_1.colorB;
-// }
-
-// if (footerInfo) {
-//     footerInfo[2].style.backgroundColor = glovnoyeObjComponiya_1.colorB;
-// }
-
-// if (headerLogoNameComponiya) {
-//     headerLogoNameComponiya.forEach(e => {
-//         e.textContent = glovnoyeObjComponiya_1.componiyaName
-//     })
-// }
-
-// if (mainDataSections) {
-//     mainDataSections.forEach(element => {
-//         element.style = `border : 2px solid ${glovnoyeObjComponiya_1.colorB}`
-//     });
-// }
-
-// if (mainRestartSection) {
-//     mainRestartSection.style.backgroundColor = glovnoyeObjComponiya_1.colorNavB;
-// }
-
-
-// if (header1) {
-//     header1.style.backgroundColor = glovnoyeObjComponiya_1.colorB;
-
-// }
-
-
-// if (mainDataSectionClick) {
-//     mainDataSectionClick.forEach(e => {
-
-//         e.style.backgroundColor = glovnoyeObjComponiya_1.colorB;
-//     })
-
-// }
-
-// if (mainDataSectionTarif2Exchange) {
-//     mainDataSectionTarif2Exchange.forEach(e => {
-//         e.style.backgroundColor = glovnoyeObjComponiya_1.colorB
-//     })
-// }
-
-
-// if (colorTexts) {
-//     colorTexts.forEach(e => {
-//         e.style.color = glovnoyeObjComponiya_1.colorB
-
-//     })
-// }
+componiyaData.length >= 1
+    ? colorsUSSd(componiyaData[0].colorB, componiyaData[0].colorNavB, componiyaData[0].componiyaName)
+    : colorsUSSd("green", "green", "noComponiya");
 
 
 
@@ -97,29 +43,149 @@ let glovnoyeObjComponiya_1 = glovnoyeObjComponiya;
 
 
 
+onclickComponiya.forEach((e) => {
+
+    e.addEventListener("click", (i) => {
+        let obj = new Object;
 
 
-let ddd = false;
+        componiyaData.forEach((e2) => {
+            if (i.currentTarget.getAttribute("name") == e2.componiyaName) {
+                obj = e2;
+            }
+
+        })
+
+        switch (obj.componiyaName) {
+            case "uztelecom":
+                break;
+            case "beeline":
+
+                colorsUSSd(obj.colorB, obj.colorNav, obj.componiyaName)
 
 
 
-console.log("---------------");
 
-onclickComponiya.forEach((item, i) => {
-   
-    item.addEventListener("click", () => {
 
-        ddd = true;
-       
+
+
+                console.log("beeline1");
+                break;
+            case "usel":
+                console.log("usel1");
+                break;
+            case "mobiuz":
+                console.log("mobiuz1");
+                break;
+            default:
+                console.log("topilmadi");
+        }
+
+
+
+
+
+
+
     })
+
+
+
+
+
+
 })
 
-export let dddd1 = ddd;
 
 
-setInterval(function () {
-    console.log(ddd);
-}, 5000)
+
+
+
+
+
+
+
+function colorsUSSd(colorBody, colorNav, componiyaNameF) {
+
+
+
+    
+    if (footer1) {
+        footer1.style.backgroundColor = colorBody;
+    }
+
+    if (navColors) {
+        navColors.style.backgroundColor = colorNav;
+
+    }
+
+    if (footerInfo) {
+        footerInfo[2].style.backgroundColor = colorBody;
+    }
+
+    if (headerLogoNameComponiya) {
+        headerLogoNameComponiya.forEach(e => {
+            e.textContent = componiyaNameF
+        })
+    }
+
+    if (mainDataSections) {
+        mainDataSections.forEach(element => {
+            element.style = `border : 2px solid ${colorBody}`
+        });
+    }
+
+    if (mainRestartSection) {
+        mainRestartSection.style.backgroundColor = colorNav;
+    }
+
+
+    if (header1) {
+        header1.style.backgroundColor = colorBody;
+
+    }
+
+
+    if (mainDataSectionClick) {
+        mainDataSectionClick.forEach(e => {
+
+            e.style.backgroundColor = colorBody;
+        })
+
+    }
+
+    if (mainDataSectionTarif2Exchange) {
+        mainDataSectionTarif2Exchange.forEach(e => {
+            e.style.backgroundColor = colorBody;
+        })
+    }
+
+
+    if (colorTexts) {
+        colorTexts.forEach(e => {
+            e.style.color = colorBody;
+
+        })
+    }
+
+
+
+}
+
+
+
+
+
+
+// window.location.href = "../../html/mainHtml/m-d-sections/m-d-s-click.html";
+
+
+
+
+
+
+
+
 
 
 
