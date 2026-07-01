@@ -93,13 +93,16 @@
         position: sticky;
         top: 40px;
         width: fit-content;
+        background-color: rgb(27, 21, 132);
+        height: max-content;
     }
 
     .componiya {
         width: 364px;
+       
         top: 0;
         min-height: max-content;
-        background-color: rgb(74, 33, 33);
+        
         display: flex;
         justify-content: space-around;
         padding: 10px 0 10px 0;

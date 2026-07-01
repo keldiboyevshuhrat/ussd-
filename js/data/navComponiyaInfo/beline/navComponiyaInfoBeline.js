@@ -1,108 +1,81 @@
 
 
-let beelineNavDay = [
+let beelineNavMbInfoDaily = [
     {
-        mb: "20 gb",
-        narx: "50 000 so'm",
+        type: "20 gb",
+        narx: "5 000 so'm",
         yoqish: "*132*123123#"
 
     },
+   
+]
+
+
+/// oylik mb 
+let beelineNavMbInfoManthly = [
     {
-        mb: "20 gb",
+        type: "20 gb",
         narx: "50 000 so'm",
-        yoqish: "*132*123123#"
+        yoqish: "*132*123345123#"
 
     },
     {
-        mb: "20 gb",
+        type: "20 gb",
         narx: "50 000 so'm",
-        yoqish: "*132*123123#"
+        yoqish: "*132*123134523#"
 
     },
-    {
-        mb: "20 gb",
-        narx: "50 000 so'm",
-        yoqish: "*132*123123#"
-
-    }
+  
 
 ]
 
+/// yillik internet poket 
+
+let beelineNavMbInfoYearly = [
+    {
+        type: "2000 gb",
+        narx: "250 000 so'm",
+        yoqish: "*132*123345675123#"
+
+    },
+    {
+        type: "1000 gb",
+        narx: "130 000 so'm",
+        yoqish: "*132*123134523#"
+
+    },
+    {
+        type: "3000 gb",
+        narx: "300 000 so'm",
+        yoqish: "*132*123453123#"
+
+    },
+  
+]
 
 
-let beelineNav = [
+/// beline nav qismi 
+
+
+export let beelineNavInfoMb = [
 
     {
-        text: "kun beline",
-        component: beelineNavDay
+        name : "kunlik",
+        mbInfo :  beelineNavMbInfoDaily,
     },
 
     {
-        text: "yil beline",
-        component: beelineNavDay
+        name : "oylik",
+        mbInfo :  beelineNavMbInfoManthly,
     },
+
     {
-        text: "oy beline",
-        component: beelineNavDay
+        name : "yillik",
+        mbInfo : beelineNavMbInfoYearly
     }
 
 
 ]
-
-
-let isInternetPoketDayYearsMethNav = [
-    {
-        id: 1,
-        componiyaName: []
-    },
-    {
-        id: 2,
-        componiyaName: beelineNav
-    },
-    {
-        id: 3,
-        componiyaName: []
-    },
-    {
-        id: 4,
-        componiya: []
-    }
-
-]
-
-
-
-
-
-export let navSectionsInfoType = [
-    {
-        textName : "internet poket",
-        navSectionsInternetPoket: isInternetPoketDayYearsMethNav,
-    },
-    {
-        navSectionsTarif: isInternetPoketDayYearsMethNav,
-        textName : "tarif",
-    },
-    {
-        navSectionsDaqiqaPoket: isInternetPoketDayYearsMethNav,
-        textName : "daqiqa poket",
-    },
-    {
-        navSectionsAksiyaVaYangilklar: isInternetPoketDayYearsMethNav,
-        textName : "yangiliklar va aksiyalar",
-    },
-    {
-        navSectionsSmsPoket: isInternetPoketDayYearsMethNav,
-        textName : "sms poket",
-    },
-    {
-        navSectionsUssdiCodes: isInternetPoketDayYearsMethNav,
-        textName : "ussd kodlari va hizmatlar",
-    }
-]
-
-
-
 
 
 

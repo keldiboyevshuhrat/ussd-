@@ -1,6 +1,6 @@
 // path collors backgrounds and text colors
 let header1 = document.querySelector("header");
-let navColors = document.querySelector("nav");
+let navColors = document.querySelectorAll("nav");
 let mainDataSections = document.querySelectorAll(".m-d-section-1");
 let mainRestartSection = document.querySelector(".main-restart-section");
 let footer1 = document.querySelector("footer");
@@ -17,22 +17,14 @@ let onclickComponiya = document.querySelectorAll(".onclickComponiya");
 import { componiyaData } from "../data/componiyaData/componiyaData.js";
 
 
-navColors.style.backgroundColor = "red";
+
 
 
 
 //    
 //   
 //    
-//     
-
-
-
-
-
-componiyaData.length >= 1
-    ? colorsUSSd(componiyaData[0].colorB, componiyaData[0].colorNavB, componiyaData[0].componiyaName)
-    : colorsUSSd("green", "green", "noComponiya");
+//   
 
 
 
@@ -40,6 +32,11 @@ componiyaData.length >= 1
 
 
 
+if (!JSON.parse(localStorage.getItem("componiyaData"))) {
+
+    localStorage.setItem("componiyaData", JSON.stringify(componiyaData));
+}
+let localStorageGetItemComponiyaData = JSON.parse(localStorage.getItem("componiyaData"));
 
 
 
@@ -48,53 +45,55 @@ onclickComponiya.forEach((e) => {
     e.addEventListener("click", (i) => {
         let obj = new Object;
 
-
-        componiyaData.forEach((e2) => {
+        localStorageGetItemComponiyaData.forEach((e2) => {
             if (i.currentTarget.getAttribute("name") == e2.componiyaName) {
                 obj = e2;
+                localStorage.setItem("newObjCompiniya", JSON.stringify(e2));
             }
 
         })
 
+
+
         switch (obj.componiyaName) {
             case "uztelecom":
+                colorsUSSd(obj.colorB, obj.colorNavB, obj.componiyaName)
                 break;
             case "beeline":
-
-                colorsUSSd(obj.colorB, obj.colorNav, obj.componiyaName)
-
-
-
-
-
-
-
-                console.log("beeline1");
+                colorsUSSd(obj.colorB, obj.colorNavB, obj.componiyaName)
                 break;
             case "usel":
-                console.log("usel1");
+                colorsUSSd(obj.colorB, obj.colorNavB, obj.componiyaName)
                 break;
             case "mobiuz":
-                console.log("mobiuz1");
+                colorsUSSd(obj.colorB, obj.colorNavB, obj.componiyaName)
                 break;
             default:
                 console.log("topilmadi");
         }
 
-
-
-
-
-
-
     })
 
-
-
-
-
-
 })
+
+
+
+
+let getItemObjComponiya = JSON.parse(localStorage.getItem("newObjCompiniya"))
+    ? JSON.parse(localStorage.getItem("newObjCompiniya"))
+    : new Object;
+
+
+
+
+
+Object.keys(getItemObjComponiya).length !== 0
+    ? colorsUSSd(getItemObjComponiya.colorB, getItemObjComponiya.colorNavB, getItemObjComponiya.componiyaName)
+    : colorsUSSd("green", "green", "noComponiya");
+
+
+
+
 
 
 
@@ -109,13 +108,16 @@ function colorsUSSd(colorBody, colorNav, componiyaNameF) {
 
 
 
-    
+
     if (footer1) {
         footer1.style.backgroundColor = colorBody;
     }
 
     if (navColors) {
-        navColors.style.backgroundColor = colorNav;
+        navColors.forEach((e) => {
+            e.style.backgroundColor = colorNav;
+          
+        })
 
     }
 
@@ -182,80 +184,6 @@ function colorsUSSd(colorBody, colorNav, componiyaNameF) {
 
 
 
-
-
-
-
-
-
-
-
-
-// glovnoyeObjComponiya_1 = componiyaData[i];
-
-
-
-// let b1 = glovnoyeObjComponiya_1.colorB;
-// let n1 = glovnoyeObjComponiya_1.colorNavB;
-
-
-
-// if (navColors) {
-//     navColors.style.backgroundColor = n1;
-// }
-// if (footer1) {
-//     footer1.style.backgroundColor = b1;
-
-// }
-
-// if (footerInfo) {
-//     footerInfo[2].style.backgroundColor = b1;
-// }
-
-// if (headerLogoNameComponiya) {
-//     headerLogoNameComponiya.forEach(e => {
-//         e.textContent = glovnoyeObjComponiya_1.componiyaName
-//     })
-// }
-
-// if (mainDataSections) {
-//     mainDataSections.forEach(element => {
-//         element.style = `border : 2px solid ${b1}`
-//     });
-// }
-
-// if (mainRestartSection) {
-//     mainRestartSection.style.backgroundColor = n1;
-// }
-
-
-// if (header1) {
-//     header1.style.backgroundColor = b1;
-
-// }
-
-
-// if (mainDataSectionClick) {
-//     mainDataSectionClick.forEach(e => {
-
-//         e.style.backgroundColor = b1;
-//     })
-
-// }
-
-// if (mainDataSectionTarif2Exchange) {
-//     mainDataSectionTarif2Exchange.forEach(e => {
-//         e.style.backgroundColor = b1
-//     })
-// }
-
-
-// if (colorTexts) {
-//     colorTexts.forEach(e => {
-//         e.style.color = b1
-
-//     })
-// }
 
 
 
