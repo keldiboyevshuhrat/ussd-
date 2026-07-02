@@ -8,12 +8,12 @@ import { beelineNavInfoAcsiyaVaYangiliklar } from "./navComponiyaInfoBeelineAcsi
 
 
 
- export let beelineObjs = {
+export let companiyaTypeBeeline = {
 
-    name : "beeline",
-    beelineNavInfoMb,
-    beelineNavInfoTarif,
-    beelineNavInfoSms,
-    beelineNavInfoDaqiqa,
-    beelineNavInfoAcsiyaVaYangiliklar,
+    name: "beeline",
+    mb: beelineNavInfoMb,
+    tarif: beelineNavInfoTarif,
+    sms: beelineNavInfoSms,
+    daqiqa: beelineNavInfoDaqiqa,
+    news: beelineNavInfoAcsiyaVaYangiliklar,
 }

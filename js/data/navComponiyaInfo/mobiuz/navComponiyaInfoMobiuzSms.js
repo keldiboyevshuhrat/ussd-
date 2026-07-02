@@ -1,9 +1,9 @@
 
 
-let beelineNavSmsInfoDaily = [
+let mobiuzNavSmsInfoDaily = [
     {
         type: "100 sms",
-        narx: "5 000 so'm",
+        narx: "1 000 so'm",
         yoqish: "*132*123123#"
 
     },
@@ -12,16 +12,16 @@ let beelineNavSmsInfoDaily = [
 
 
 /// oylik sms 
-let beelineNavSmsInfoManthly = [
+let mobiuzNavSmsInfoManthly = [
     {
         type: "2 999 sms",
-        narx: "50 000 so'm",
+        narx: "2 000 so'm",
         yoqish: "*132*123345123#"
 
     },
     {
         type: "2 999 sms",
-        narx: "50 000 so'm",
+        narx: "2 000 so'm",
         yoqish: "*132*123345123#"
 
     },
@@ -31,46 +31,46 @@ let beelineNavSmsInfoManthly = [
 
 /// yillik internet poket 
 
-let beelineNavSmsInfoYearly = [
+let mobiuzNavSmsInfoYearly = [
     {
         type: "10 999 sms",
-        narx: "100 000 so'm",
-        yoqish: "*132*123345123#"
+        narx: "10 000 so'm",
+        yoqish: "*132*123345123#m"
 
     },
     {
         type: "10 999 sms",
-        narx: "100 000 so'm",
-        yoqish: "*132*123345123#"
+        narx: "2 000 so'm",
+        yoqish: "*132*123345123#m"
 
     },  {
         type: "10 999 sms",
         narx: "100 000 so'm",
-        yoqish: "*132*123345123#"
+        yoqish: "*132*123345123#m"
 
     },
 
 ]
 
 
-/// beline nav qismi 
+/// mobiuz nav qismi 
 
 
-export let beelineNavInfoSms = [
+export let mobiuzNavInfoSms = [
 
     {
         period: "kunlik",
-        Info: beelineNavSmsInfoDaily,
+        Info: mobiuzNavSmsInfoDaily,
     },
 
     {
         period: "oylik",
-        Info: beelineNavSmsInfoManthly,
+        Info: mobiuzNavSmsInfoManthly,
     },
 
     {
         period: "yillik",
-        Info: beelineNavSmsInfoYearly
+        Info: mobiuzNavSmsInfoYearly
     }
 
 

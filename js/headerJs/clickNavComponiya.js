@@ -32,18 +32,30 @@ import { componiyaData } from "../data/componiyaData/componiyaData.js";
 
 
 
-if (!JSON.parse(localStorage.getItem("componiyaData"))) {
+if (JSON.parse(localStorage.getItem("componiyaData")) == null) {
 
     localStorage.setItem("componiyaData", JSON.stringify(componiyaData));
+
 }
+
+
 let localStorageGetItemComponiyaData = JSON.parse(localStorage.getItem("componiyaData"));
+let obj = new Object;
+
+
+if(!JSON.parse(localStorage.getItem("newObjCompiniya"))){
+    localStorage.setItem("newObjCompiniya", JSON.stringify(localStorageGetItemComponiyaData[0]));
+}
+
+
+
 
 
 
 onclickComponiya.forEach((e) => {
 
     e.addEventListener("click", (i) => {
-        let obj = new Object;
+
 
         localStorageGetItemComponiyaData.forEach((e2) => {
             if (i.currentTarget.getAttribute("name") == e2.componiyaName) {
@@ -79,17 +91,19 @@ onclickComponiya.forEach((e) => {
 
 
 
-let getItemObjComponiya = JSON.parse(localStorage.getItem("newObjCompiniya"))
-    ? JSON.parse(localStorage.getItem("newObjCompiniya"))
-    : new Object;
+let jsonbor = JSON.parse(localStorage.getItem("newObjCompiniya"));
+
+jsonbor ? colorsUSSd(jsonbor.colorB, jsonbor.colorNavB, jsonbor.componiyaName)
+    :
+    colorsUSSd(localStorageGetItemComponiyaData[0].colorB,
+        localStorageGetItemComponiyaData[0].colorNavB,
+        localStorageGetItemComponiyaData[0].componiyaName
+    );
 
 
 
 
 
-Object.keys(getItemObjComponiya).length !== 0
-    ? colorsUSSd(getItemObjComponiya.colorB, getItemObjComponiya.colorNavB, getItemObjComponiya.componiyaName)
-    : colorsUSSd("green", "green", "noComponiya");
 
 
 
@@ -116,7 +130,7 @@ function colorsUSSd(colorBody, colorNav, componiyaNameF) {
     if (navColors) {
         navColors.forEach((e) => {
             e.style.backgroundColor = colorNav;
-          
+
         })
 
     }
@@ -173,7 +187,6 @@ function colorsUSSd(colorBody, colorNav, componiyaNameF) {
 
 
 }
-
 
 
 

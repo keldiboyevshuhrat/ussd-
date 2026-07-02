@@ -1,14 +1,14 @@
 
 /// aksiyalar
 
-let beelineNavAksiyalarInfoDaily = [
+let uselavAksiyalarInfoDaily = [
     {
-        malumot: "jahon chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
+        malumot: "mobiuz  chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
         malumotPoragrf: "osson 10 tarifga ulanig va oyiga bizning beepul prolojeniyasidan oyiga 10 000 000 so'mga pul o'tkama qilng va yo'llamani yutib oling "
 
     },
     {
-        malumot: "jahon chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
+        malumot: "olishingiz imkoniyati bor",
         malumotPoragrf: "osson 10 tarifga ulanig va oyiga bizning beepul prolojeniyasidan oyiga 10 000 000 so'mga pul o'tkama qilng va yo'llamani yutib oling "
 
     }
@@ -16,7 +16,7 @@ let beelineNavAksiyalarInfoDaily = [
 
 
 /// yangiliklar
-let beelineNavYangiliklarInfoManthly = [
+let uselNavYangiliklarInfoManthly = [
     {
         malumot: "jahon chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
         malumotPoragrf: "osson 10 tarifga ulanig va oyiga bizning beepul prolojeniyasidan oyiga 10 000 000 so'mga pul o'tkama qilng va yo'llamani yutib oling "
@@ -27,19 +27,19 @@ let beelineNavYangiliklarInfoManthly = [
 
 
 
-/// beline nav qismi 
+/// usel nav qismi 
 
 
-export let beelineNavInfoAcsiyaVaYangiliklar = [
+export let uselNavInfoAcsiyaVaYangiliklar = [
 
     {
         name: "aksiyalar",
-        Info: beelineNavAksiyalarInfoDaily,
+        Info: uselavAksiyalarInfoDaily,
     },
 
     {
         name: "yangilklar",
-        Info: beelineNavYangiliklarInfoManthly,
+        Info: uselNavYangiliklarInfoManthly,
     },
 
 

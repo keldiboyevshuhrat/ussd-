@@ -1,9 +1,10 @@
 
 
-let beelineNavMbInfoDaily = [
+
+let uselNavMbInfoDaily = [
     {
-        type: "20 gb",
-        narx: "5 000 so'm",
+        type: "25 gb",
+        narx: "500 000 so'm",
         yoqish: "*132*123123#"
 
     },
@@ -12,15 +13,15 @@ let beelineNavMbInfoDaily = [
 
 
 /// oylik mb 
-let beelineNavMbInfoManthly = [
+let uselNavMbInfoManthly = [
     {
-        type: "20 gb",
+        type: "30 gb",
         narx: "50 000 so'm",
         yoqish: "*132*123345123#"
 
     },
     {
-        type: "20 gb",
+        type: "30 gb",
         narx: "50 000 so'm",
         yoqish: "*132*123134523#"
 
@@ -31,21 +32,21 @@ let beelineNavMbInfoManthly = [
 
 /// yillik internet poket 
 
-let beelineNavMbInfoYearly = [
+let uselNavMbInfoYearly = [
     {
-        type: "2000 gb",
+        type: "2300 gb",
         narx: "250 000 so'm",
         yoqish: "*132*123345675123#"
 
     },
     {
-        type: "1000 gb",
+        type: "1300 gb",
         narx: "130 000 so'm",
         yoqish: "*132*123134523#"
 
     },
     {
-        type: "3000 gb",
+        type: "3330 gb",
         narx: "300 000 so'm",
         yoqish: "*132*123453123#"
 
@@ -54,24 +55,24 @@ let beelineNavMbInfoYearly = [
 ]
 
 
-/// beline nav qismi 
+/// usel nav qismi 
 
 
-export let beelineNavInfoMb = [
+export let uselNavInfoMb = [
 
     {
         period : "kunlik",
-        Info :  beelineNavMbInfoDaily,
+        Info :  uselNavMbInfoDaily,
     },
 
     {
         period : "oylik",
-        Info :  beelineNavMbInfoManthly,
+        Info :  uselNavMbInfoManthly,
     },
 
     {
         period : "yillik",
-        Info : beelineNavMbInfoYearly
+        Info : uselNavMbInfoYearly
     }
 
 

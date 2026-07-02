@@ -1,8 +1,8 @@
 
 
-let beelineNavDaqiqaInfoDaily = [
+let mobiuzNavDaqiqaInfoDaily = [
     {
-        type: "500 daq",
+        type: "500 daq m",
         narx: "25 000 so'm",
         yoqish: "*132*123123#"
 
@@ -12,9 +12,9 @@ let beelineNavDaqiqaInfoDaily = [
 
 
 /// oylik daqiqa
-let beelineNavDaqiqaInfoManthly = [
+let mobiuzNavDaqiqaInfoManthly = [
     {
-        type: "500 daq",
+        type: "500 daq m",
         narx: "25 000 so'm",
         yoqish: "*132*123123#"
 
@@ -30,9 +30,9 @@ let beelineNavDaqiqaInfoManthly = [
 
 /// yillik daqiqa 
 
-let beelineNavDaqiqaInfoYearly = [
+let mobiuzNavDaqiqaInfoYearly = [
     {
-        type: "500 daq",
+        type: "500 daq m",
         narx: "25 000 so'm",
         yoqish: "*132*123123#"
 
@@ -56,21 +56,21 @@ let beelineNavDaqiqaInfoYearly = [
 
 
 
-export let beelineNavInfoDaqiqa = [
+export let mobiuzNavInfoDaqiqa = [
 
     {
         period : "kunlik",
-        Info :  beelineNavDaqiqaInfoDaily,
+        Info :  mobiuzNavDaqiqaInfoDaily,
     },
 
     {
         period : "oylik",
-        Info :  beelineNavDaqiqaInfoManthly,
+        Info :  mobiuzNavDaqiqaInfoManthly,
     },
 
     {
         period : "yillik",
-        Info : beelineNavDaqiqaInfoYearly
+        Info : mobiuzNavDaqiqaInfoYearly
     }
 
 

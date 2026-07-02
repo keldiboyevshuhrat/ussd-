@@ -1,14 +1,14 @@
 
 /// aksiyalar
 
-let beelineNavAksiyalarInfoDaily = [
+let uztelecomavAksiyalarInfoDaily = [
     {
-        malumot: "jahon chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
+        malumot: "uztelecom  chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
         malumotPoragrf: "osson 10 tarifga ulanig va oyiga bizning beepul prolojeniyasidan oyiga 10 000 000 so'mga pul o'tkama qilng va yo'llamani yutib oling "
 
     },
     {
-        malumot: "jahon chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
+        malumot: "olishingiz imkoniyati bor",
         malumotPoragrf: "osson 10 tarifga ulanig va oyiga bizning beepul prolojeniyasidan oyiga 10 000 000 so'mga pul o'tkama qilng va yo'llamani yutib oling "
 
     }
@@ -16,9 +16,9 @@ let beelineNavAksiyalarInfoDaily = [
 
 
 /// yangiliklar
-let beelineNavYangiliklarInfoManthly = [
+let uztelecomNavYangiliklarInfoManthly = [
     {
-        malumot: "jahon chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
+        malumot: "uztelecom chimpiyonatiga yo'llanma olishingiz imkoniyati bor",
         malumotPoragrf: "osson 10 tarifga ulanig va oyiga bizning beepul prolojeniyasidan oyiga 10 000 000 so'mga pul o'tkama qilng va yo'llamani yutib oling "
 
     }
@@ -27,19 +27,19 @@ let beelineNavYangiliklarInfoManthly = [
 
 
 
-/// beline nav qismi 
+/// uztelecom nav qismi 
 
 
-export let beelineNavInfoAcsiyaVaYangiliklar = [
+export let uztelecomNavInfoAcsiyaVaYangiliklar = [
 
     {
         name: "aksiyalar",
-        Info: beelineNavAksiyalarInfoDaily,
+        Info: uztelecomavAksiyalarInfoDaily,
     },
 
     {
         name: "yangilklar",
-        Info: beelineNavYangiliklarInfoManthly,
+        Info: uztelecomNavYangiliklarInfoManthly,
     },
 
 

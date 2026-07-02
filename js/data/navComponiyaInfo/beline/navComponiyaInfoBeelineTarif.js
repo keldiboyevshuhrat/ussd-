@@ -165,18 +165,18 @@ let beelineNavInfoTarifYearly = [
 
  export let beelineNavInfoTarif =  [
     {
-        name : "kunlik",
-        mbInfo :  beelineNavInfoTarifDay,
+        period : "kunlik",
+        Info :  beelineNavInfoTarifDay,
     },
 
     {
-        name : "oylik",
-        mbInfo :  beelineNavInfoTarifMonthly,
+        period : "oylik",
+        Info :  beelineNavInfoTarifMonthly,
     },
 
     {
-        name : "yillik",
-        mbInfo : beelineNavInfoTarifYearly
+        period : "yillik",
+        Info : beelineNavInfoTarifYearly
     }
 
 ]

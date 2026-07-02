@@ -19,7 +19,6 @@ function rasim1(newDivComponiya) {
         <div class="componiya-1 onclickComponiya border-black" name="${newDivComponiya[i].componiyaName}"> 
         <img src="${newDivComponiya[i].img}" alt="${newDivComponiya[i].componiyaName}">
                     </div>
-        
         `
         }
 
