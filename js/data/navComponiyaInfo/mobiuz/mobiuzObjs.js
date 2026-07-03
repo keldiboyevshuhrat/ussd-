@@ -5,7 +5,7 @@ import { mobiuzNavInfoTarif } from "./navComponiyaInfoMobiuzTarif.js";
 import { mobiuzNavInfoSms } from "./navComponiyaInfoMobiuzSms.js";
 import { mobiuzNavInfoDaqiqa } from "./navComponiyaInfoMobiuzDaqiqa.js";
 import { mobiuzNavInfoAcsiyaVaYangiliklar } from "./navComponiyaInfoMobiuzAcsiyaVaYangiliklar.js";
-
+import {mobiuzNavInfoUSSD} from "./navComponiyaInfoMobiuzUSSD.js"
 
 
 export let companiyaTypeMobiuz = {
@@ -16,4 +16,5 @@ export let companiyaTypeMobiuz = {
     sms: mobiuzNavInfoSms,
     daqiqa: mobiuzNavInfoDaqiqa,
     news: mobiuzNavInfoAcsiyaVaYangiliklar,
+    ussd : mobiuzNavInfoUSSD
 }

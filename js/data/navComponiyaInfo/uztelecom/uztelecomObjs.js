@@ -5,7 +5,7 @@ import { uztelecomNavInfoTarif } from "./navComponiyaInfoUztelecomTarif.js";
 import { uztelecomNavInfoSms } from "./navComponiyaInfoUztelecomSms.js";
 import { uztelecomNavInfoDaqiqa } from "./navComponiyaInfoUztelecomDaqiqa.js";
 import { uztelecomNavInfoAcsiyaVaYangiliklar } from "./navComponiyaInfoUztelecomAcsiyaVaYangiliklar.js";
-
+import { uztelecomNavInfoUSSD } from "./navComponiyaInfoUztelecomUSSD.js";
 
 
 export let companiyaTypeUztelecom = {
@@ -16,4 +16,5 @@ export let companiyaTypeUztelecom = {
     sms: uztelecomNavInfoSms,
     daqiqa: uztelecomNavInfoDaqiqa,
     news: uztelecomNavInfoAcsiyaVaYangiliklar,
+    ussd: uztelecomNavInfoUSSD,
 }

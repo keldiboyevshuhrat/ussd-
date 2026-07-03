@@ -5,7 +5,7 @@ import { uselNavInfoTarif } from "./navComponiyaInfoUselTarif.js";
 import { uselNavInfoSms } from "./navComponiyaInfoUselSms.js";
 import { uselNavInfoDaqiqa } from "./navComponiyaInfoUselDaqiqa.js";
 import { uselNavInfoAcsiyaVaYangiliklar } from "./navComponiyaInfoUselAcsiyaVaYangiliklar.js";
-
+import { uselNavInfoUSSD} from "./navComponiyaInfoUselUSSD.js"
 
 
 export let companiyaTypeUsel = {
@@ -16,4 +16,5 @@ export let companiyaTypeUsel = {
     sms: uselNavInfoSms,
     daqiqa: uselNavInfoDaqiqa,
     news: uselNavInfoAcsiyaVaYangiliklar,
+    ussd : uselNavInfoUSSD,
 }

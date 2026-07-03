@@ -16,28 +16,47 @@ let getObjNew = JSON.parse(localStorage.getItem("newObjCompiniya"));
 let getClickMeText = localStorage.getItem("clickMeText");
 
 
-console.log(getObjNew.companiyaType.tarif[1]);
+
 
 
 switch (Number(getClickMeText)) {
     case 1:
 
-        tarifAll();
+        if (m_d_s_tariflar) {
+            tarifAll();
 
+        }
 
         break;
     case 2:
-
-        paketAll("mb");
+        if (m_d_s_c_main_01) {
+            infoAll(getObjNew.companiyaType.mb);
+        }
         break;
     case 3:
-        paketAll("daqiqa")
+        if (m_d_s_c_main_01) {
+            infoAll(getObjNew.companiyaType.daqiqa)
+        }
         break;
     case 4:
+        if (m_d_s_c_main_01) {
+            infoAll(getObjNew.companiyaType.sms)
+        }
+
         break;
     case 5:
+        if (m_d_s_tariflar) {
+            aksiyaVaYAngiliklar(getObjNew.companiyaType.news);
+        }
+
         break;
     case 6:
+
+        if (m_d_s_tariflar) {
+
+            ussdAll(getObjNew.companiyaType.ussd)
+        }
+
         break;
     default:
         console.log("getClickMeText ishlamadi ");
@@ -52,13 +71,7 @@ switch (Number(getClickMeText)) {
 
 
 
-
-
-
-
-
-
-
+////////////////    tarif info  ////////////////
 function tarifAll() {
 
 
@@ -66,6 +79,7 @@ function tarifAll() {
     m_d_s_c_nav.forEach((p) => {
         getObjNew.companiyaType.tarif.forEach((element) => {
 
+
             p.innerHTML += `
             <p>${element.period}</p>
             `
@@ -83,240 +97,375 @@ function tarifAll() {
     document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
 
         e.addEventListener("click", (item) => {
-            m_d_s_tariflar.innerHTML = "";
+            tarifAll2(item);
+
+        })
+
+    })
+
+    tarifAll2("kunlik");
 
 
-            getObjNew.companiyaType.tarif.forEach((info1) => {
-                if (info1.period == item.currentTarget.textContent) {
+    function tarifAll2(item) {
+        m_d_s_tariflar.innerHTML = "";
 
 
-                    info1.Info.forEach((info2) => {
-                        console.log(info2);
+        getObjNew.companiyaType.tarif.forEach((info1) => {
+            let tengEmas = "";
 
-                        let newDiv = document.createElement("div");
-                        newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
-                        newDiv.classList.add("m-d-s-t", "border-black");
-                        newDiv.innerHTML = `
-                    <div class="m-d-s-t-1 border-black">
-                        <h3 class="border-black">${info2.tarifName}</h3>
-                        <i class=" m_d_s_t_1_icon fa-brands fa-telegram"></i>
-                    </div>
-                    <div class="m-d-s-t-2 border-black">
-                        <div class="m-d-s-c-m-2-text border-black">
-                            <p>abanet tolovi:</p>
-                            <p>20,000 so'm</p>
-                        </div>
-                        <div class="m-d-s-c-m-2-text border-black">
-                            <p>chiquvchi o'zbekiston bo'yicha</p>
-                            <p>vip</p>
-                        </div>
-                        <div class="m-d-s-c-m-2-text border-black">
-                            <p>mb</p>
-                            <p>100</p>
-                        </div>
-                        <div class="m-d-s-c-m-2-text border-black">
-                            <p>sms:</p>
-                            <p>88</p>
-                        </div>
-                        <div class="m-d-s-c-m-2-text border-black">
-                            <p>yoqish:</p>
-                            <p>*122*97106324*123#</p>
-                        </div>
+            typeof item == "string" ? tengEmas = item : tengEmas = item.currentTarget.textContent
+
+
+
+console.log(info1);
+            if (info1.period == tengEmas) {
+
+
+                info1.Info.forEach((info2) => {
+
+
+                    let newDiv = document.createElement("div");
+                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    newDiv.classList.add("m-d-s-t", "border-black");
+                    newDiv.innerHTML = `
+            <div class="m-d-s-t-1 border-black" >
+                <h3 class="border-black">${info2.tarifName}</h3>
+                <i class=" m_d_s_t_1_icon fa-brands fa-telegram"></i>
+            </div>
+            <div class="m-d-s-t-2 border-black">
+                <div class="m-d-s-c-m-2-text border-black">
+                    <p>abanet tolovi:</p>
+                    <p>${info2.abonentTolovi}</p>
+                </div>
+                <div class="m-d-s-c-m-2-text border-black">
+                    <p>chiquvchi o'zbekiston bo'yicha</p>
+                    <p>${info2.chiquvchiOzbekistonBoyicha}</p>
+                </div>
+                <div class="m-d-s-c-m-2-text border-black">
+                    <p>mb</p>
+                    <p>${info2.internet}</p>
+                </div>
+                <div class="m-d-s-c-m-2-text border-black">
+                    <p>sms:</p>
+                    <p>${info2.sms}</p>
+                </div>
+                <div class="m-d-s-c-m-2-text border-black">
+                    <p>yoqish:</p>
+                    <p>${info2.tarifAlmashtirish}</p>
+                </div>
+
+                <div class="m-d-s-c-m-2-text border-black">
+                    <p>tarifdan tarqarida :</p>
+                    <p>${info2.taridanTashqari}</p>
+                </div>
+                
+
+                <div class="m-d-s-t-2-exchange ">
+                    <p>tarifni almashtirish </p>
+                </div >
+            </div>
+                `
+
+
+                    m_d_s_tariflar.appendChild(newDiv);
+
+
+                })
+
+
+            }
+
+        })  
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+//////////////    info all daqiqa , sms , mb        x3  //////////////// 
+function infoAll(key) {
+
+
+    m_d_s_c_nav.forEach((p) => {
+
+
+        p.innerHTML = "";
+        key.forEach((element) => {
+
+            p.innerHTML += `
+            <p>${element.period}</p>
+            `
+
+
+
+
+        })
+    });
+
+
+
+
+    document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
+
+        e.addEventListener("click", (item) => {
+            infoAll2(item);
+
+        })
+
+    })
+
+
+    infoAll2("kunlik");
+
+    function infoAll2(item) {
+        m_d_s_c_main_01.innerHTML = "";
+
+
+        key.forEach((info1) => {
+            let tengEmas = "";
+
+            typeof item == "string" ? tengEmas = item : tengEmas = item.currentTarget.textContent
+
+
+            if (info1.period == tengEmas) {
+                console.log(item);
+
+
+                info1.Info.forEach((info2) => {
+
+
+                    let newDiv = document.createElement("div");
+                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    newDiv.classList.add("m-d-s-c-main", "border-black");
+                    newDiv.innerHTML = `
+    <div class="m-d-s-c-m-1 border-black" >
+        <p class="m-d-s-c-m-1-value color-texts" >${info2.type}</p>
+    </div>
+    <div class="m-d-s-c-m-2 border-black">
+        <div class="m-d-s-c-m-2-text border-black">
+            <p>narxi:</p>
+            <p>${info2.narx}</p>
+        </div>
+        <div class="m-d-s-c-m-2-text border-black">
+            <p>muddati</p>
+            <p>${info2.mudat}</p>
+        </div>
+        <div class="m-d-s-c-m-2-text border-black">
+            <p>yoqish:</p>
+            <p>${info2.yoqish}</p>
+        </div>
+
+    </div>
+                    `
+
+
+                    m_d_s_c_main_01.appendChild(newDiv);
+
+
+                })
+
+
+            }
+
+        })
+    }
+
+}
+
+
+
+
+
+
+/////////////     aksiya va yangilik lar all ///////////////
+function aksiyaVaYAngiliklar(key) {
+
+    m_d_s_c_nav.forEach((p) => {
+
+        p.innerHTML = "";
+        key.forEach((element) => {
+            p.innerHTML += `
+            <p>${element.name}</p>
+            `
+        })
+    });
+
+
+
+
+
+    document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
+
+        e.addEventListener("click", (item) => {
+
+            aksiyaVaYAngiliklar2(item)
+
+        })
+
+    })
+
+    aksiyaVaYAngiliklar2("aksiyalar")
+
+    function aksiyaVaYAngiliklar2(item) {
+        m_d_s_tariflar.innerHTML = "";
+
+
+        key.forEach((info1) => {
+
+
+            let tengEmas = "";
+
+            typeof item == "string" ? tengEmas = item : tengEmas = item.currentTarget.textContent
+
+
+            if (info1.name == tengEmas) {
+
+                info1.Info.forEach((info2) => {
+
+                    let newDiv = document.createElement("div");
+                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    newDiv.classList.add("m-d-s-promationsAndNews", "border-black");
+                    newDiv.innerHTML = `
+                     
+                    <h1 class="color-texts">${info2.malumot}</h1>
         
-                        <div class="m-d-s-t-2-exchange ">
-                            <p>tarifni almashtirish</p>
-                        </div >
+                    <p> ${info2.malumotPoragrf}</p>
+               
+                    `
+
+
+                    m_d_s_tariflar.appendChild(newDiv);
+
+
+                })
+
+
+            }
+        })
+
+
+    }
+
+}
+
+
+
+///* *************************************************************************
+
+
+
+
+
+
+
+function ussdAll(key) {
+
+    m_d_s_c_nav.forEach((p) => {
+
+        p.innerHTML = "";
+        key.forEach((element) => {
+            p.innerHTML += `
+            <p>${element.period}</p>
+            `
+
+        })
+    });
+
+
+
+
+
+    document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
+
+
+
+        e.addEventListener("click", (item) => {
+
+            ussdAll2(item);
+
+
+        })
+
+    })
+
+    ussdAll2("ussd kodlar");
+
+
+
+    function ussdAll2(item) {
+        m_d_s_tariflar.innerHTML = "";
+
+        console.log(m_d_s_tariflar);
+        key.forEach((info1) => {
+
+            let tengEmas = "";
+
+            typeof item == "string" ? tengEmas = item : tengEmas = item.currentTarget.textContent
+
+
+
+
+            if (info1.period == tengEmas) {
+
+                info1.Info.forEach((info2) => {
+
+
+                    let newDiv = document.createElement("div");
+                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    newDiv.classList.add("m-d-s-ussdCode", "border-black");
+                    newDiv.innerHTML = `
+                   
+                    <div class="m-d-s-ussdCode-1 border-black">
+                        <p class="m-d-s-c-m-1-value color-texts">100 mb</p>
                     </div>
-                        `
+                    <div class="m-d-s-ussdCode-2 border-black">
+                        <div class="m-d-s-ussdCode-2-text-1 border-black">
+    
+                            <p>
+                                hisobni tekshirish
+                            </p>
+    
+                            <i class="fa-brands fa-telegram"></i>
+    
+                        </div>
+                        <div class="m-d-s-ussdCode-2-text-2 border-black">
+                            <p>ichtimoiy tarmoq uchun berilgan mb korish </p>
+    
+                        </div>
+    
+    
+                    </div>
+    
+             
+                    
+                    
+                    `
 
 
-                        m_d_s_tariflar.appendChild(newDiv);
+                    m_d_s_tariflar.appendChild(newDiv);
 
 
-                    })
+                })
 
 
-                }
-
-            })
-
-        })
-
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-/////////////     mb all ///////////////
-function mbAll() {
-
-    m_d_s_c_nav.forEach((p) => {
-
-        p.innerHTML = "";
-        getObjNew.companiyaType.mb.forEach((element) => {
-
-            p.innerHTML += `
-            <p>${element.period}</p>
-            `
-
-
-
+            }
 
         })
-    });
-
-
-
-
-
-    document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
-
-
-
-        e.addEventListener("click", (item) => {
-            m_d_s_c_main_01.innerHTML = "";
-
-
-            getObjNew.companiyaType.mb.forEach((info1) => {
-                if (info1.period == item.currentTarget.textContent) {
-
-
-                    info1.Info.forEach((info2) => {
-                        console.log(info2);
-
-                        let newDiv = document.createElement("div");
-                        newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
-                        newDiv.classList.add("m-d-s-c-main", "border-black");
-                        newDiv.innerHTML = `
-        <div class="m-d-s-c-m-1 border-black" >
-            <p class="m-d-s-c-m-1-value color-texts" >${info2.type}</p>
-        </div>
-        <div class="m-d-s-c-m-2 border-black">
-            <div class="m-d-s-c-m-2-text border-black">
-                <p>narxi:</p>
-                <p>20,000 so'm</p>
-            </div>
-            <div class="m-d-s-c-m-2-text border-black">
-                <p>muddati</p>
-                <p>30 kun</p>
-            </div>
-            <div class="m-d-s-c-m-2-text border-black">
-                <p>yoqish:</p>
-                <p>*122*97106324*123#</p>
-            </div>
-
-        </div>
-                        `
-
-
-                        m_d_s_c_main_01.appendChild(newDiv);
-
-
-                    })
-
-
-                }
-
-            })
-
-        })
-
-    })
-
-}
-
-
-
-console.log(getObjNew);
-
-//////////////    daqiqa  //////////////// 
-function paketAll(key) {
-
-
-    m_d_s_c_nav.forEach((p) => {
-
-        console.log(typeof getObjNew.companiyaType);
-        p.innerHTML = "";
-        getObjNew.companiyaType.key.forEach((element) => {
-
-            p.innerHTML += `
-            <p>${element.period}</p>
-            `
-
-
-
-
-        })
-    });
-
-
-
-
-    document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
-
-        e.addEventListener("click", (item) => {
-            m_d_s_c_main_01.innerHTML = "";
-
-
-            getObjNew.companiyaType.key.forEach((info1) => {
-                if (info1.period == item.currentTarget.textContent) {
-
-
-                    info1.Info.forEach((info2) => {
-                        console.log(info2);
-
-                        let newDiv = document.createElement("div");
-                        newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
-                        newDiv.classList.add("m-d-s-c-main", "border-black");
-                        newDiv.innerHTML = `
-        <div class="m-d-s-c-m-1 border-black" >
-            <p class="m-d-s-c-m-1-value color-texts" >${info2.type}</p>
-        </div>
-        <div class="m-d-s-c-m-2 border-black">
-            <div class="m-d-s-c-m-2-text border-black">
-                <p>narxi:</p>
-                <p>${info2.narx}</p>
-            </div>
-            <div class="m-d-s-c-m-2-text border-black">
-                <p>muddati</p>
-                <p>${info2.mudat}</p>
-            </div>
-            <div class="m-d-s-c-m-2-text border-black">
-                <p>yoqish:</p>
-                <p>*122*97106324*123#</p>
-            </div>
-
-        </div>
-                        `
-
-
-                        m_d_s_c_main_01.appendChild(newDiv);
-
-
-                    })
-
-
-                }
-
-            })
-
-        })
-
-    })
+    }
 
 }
