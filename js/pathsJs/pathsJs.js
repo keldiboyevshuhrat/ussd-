@@ -12,7 +12,8 @@ import "../mainJs/mainDataSections/mainDataSectionsComponiyaInfo.js"
 import "../headerJs/navtypes.js";
 import "../mainJs/mainDataSections/m-d-s-tarif-info-close-open.js";
 import "../mainJs/mainDataSections/mainData-S-T-rejasi.js";
-
+import "../mainJs/mainDataSections/mainWindow.js";
+import "../footerJs/footer.js";
 
 // console.log(getColorsNav);
 

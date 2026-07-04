@@ -19,25 +19,25 @@ function tarifOchishYopish(fteg) {
 
 
 
-    console.log(fteg);
+console.log( fteg.parentElement.style.height);
 
 
     m_d_s_t_1_icon.forEach((t) => {
-        if (t.parentElement.parentElement == fteg) {
+        if (t.parentElement == fteg) {
 
-            if (fteg.style.height) {
+            if (fteg.parentElement.style.height) {
                 t.style = `
         transform: rotate(0deg);
         
         `
 
-                fteg.style = `
+                fteg.parentElement.style = `
         height : 60px;
       
             `
 
 
-                fteg.style.height = "";
+                fteg.parentElement.style.height = "";
 
             } else {
                 t.style = `
@@ -45,7 +45,7 @@ function tarifOchishYopish(fteg) {
         
 
         `
-                fteg.style = `
+                fteg.parentElement.style = `
         height : max-content;
         overflow: hidden;
         

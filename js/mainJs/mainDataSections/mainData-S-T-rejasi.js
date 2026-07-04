@@ -23,7 +23,7 @@ switch (Number(getClickMeText)) {
     case 1:
 
         if (m_d_s_tariflar) {
-            tarifAll();
+           tarifAll();
 
         }
 
@@ -97,6 +97,15 @@ function tarifAll() {
     document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
 
         e.addEventListener("click", (item) => {
+            clearColor();
+
+
+
+            item.target.style = `
+            transition: 1s;
+            color : ${getObjNew.colorNavB};
+            border-bottom: 2px solid ${getObjNew.colorNavB};
+            `
             tarifAll2(item);
 
         })
@@ -117,7 +126,7 @@ function tarifAll() {
 
 
 
-console.log(info1);
+            console.log(info1);
             if (info1.period == tengEmas) {
 
 
@@ -125,10 +134,10 @@ console.log(info1);
 
 
                     let newDiv = document.createElement("div");
-                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    // newDiv.setAttribute("onclick", "");
                     newDiv.classList.add("m-d-s-t", "border-black");
                     newDiv.innerHTML = `
-            <div class="m-d-s-t-1 border-black" >
+            <div class="m-d-s-t-1 border-black" onclick="tarifOchishYopish(this)" >
                 <h3 class="border-black">${info2.tarifName}</h3>
                 <i class=" m_d_s_t_1_icon fa-brands fa-telegram"></i>
             </div>
@@ -160,7 +169,7 @@ console.log(info1);
                 </div>
                 
 
-                <div class="m-d-s-t-2-exchange ">
+                <div class="m-d-s-t-2-exchange" onclick="somCartOnOff()">
                     <p>tarifni almashtirish </p>
                 </div >
             </div>
@@ -175,7 +184,7 @@ console.log(info1);
 
             }
 
-        })  
+        })
     }
 
 
@@ -207,6 +216,9 @@ function infoAll(key) {
         p.innerHTML = "";
         key.forEach((element) => {
 
+
+
+
             p.innerHTML += `
             <p>${element.period}</p>
             `
@@ -222,7 +234,23 @@ function infoAll(key) {
 
     document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
 
+
+       
+
+
         e.addEventListener("click", (item) => {
+            clearColor();
+
+
+
+            item.target.style = `
+            transition: 1s;
+            color : ${getObjNew.colorNavB};
+            border-bottom: 2px solid ${getObjNew.colorNavB};
+            `
+           
+
+
             infoAll2(item);
 
         })
@@ -250,7 +278,7 @@ function infoAll(key) {
 
 
                     let newDiv = document.createElement("div");
-                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    newDiv.setAttribute("onclick", "somCartOnOff()");
                     newDiv.classList.add("m-d-s-c-main", "border-black");
                     newDiv.innerHTML = `
     <div class="m-d-s-c-m-1 border-black" >
@@ -313,6 +341,16 @@ function aksiyaVaYAngiliklar(key) {
 
         e.addEventListener("click", (item) => {
 
+
+            clearColor();
+
+
+
+            item.target.style = `
+            transition: 1s;
+            color : ${getObjNew.colorNavB};
+            border-bottom: 2px solid ${getObjNew.colorNavB};
+            `
             aksiyaVaYAngiliklar2(item)
 
         })
@@ -396,6 +434,15 @@ function ussdAll(key) {
 
         e.addEventListener("click", (item) => {
 
+            clearColor();
+
+
+
+            item.target.style = `
+            transition: 1s;
+            color : ${getObjNew.colorNavB};
+            border-bottom: 2px solid ${getObjNew.colorNavB};
+            `
             ussdAll2(item);
 
 
@@ -426,7 +473,7 @@ function ussdAll(key) {
 
 
                     let newDiv = document.createElement("div");
-                    newDiv.setAttribute("onclick", "tarifOchishYopish(this)");
+                    newDiv.setAttribute("onclick", "somCartOnOff()");
                     newDiv.classList.add("m-d-s-ussdCode", "border-black");
                     newDiv.innerHTML = `
                    
@@ -469,3 +516,51 @@ function ussdAll(key) {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function clearColor() {
+
+    document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
+
+
+        e.style = `
+        transition: 1s;
+        color : none; 
+        border-bottom: none;
+        `
+
+
+    })
+
+
+}
+
+
+let count = 0 ; 
+document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
+
+
+   if(count == 0){
+    e.style = `
+    transition: 1s;
+    color : ${getObjNew.colorNavB};
+    border-bottom: 2px solid ${getObjNew.colorNavB};
+    `
+    console.log(count);
+    console.log(e);
+    count++;
+   }
+ 
+
+})

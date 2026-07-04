@@ -99,10 +99,10 @@
 
     .componiya {
         width: 364px;
-       
+
         top: 0;
         min-height: max-content;
-        
+
         display: flex;
         justify-content: space-around;
         padding: 10px 0 10px 0;
@@ -203,7 +203,7 @@
         justify-content: space-between;
         border-radius: 5px;
         margin: auto;
-        
+
 
 
 
@@ -292,6 +292,59 @@
 
 
 
+    }
+
+    /**      ******************  sim cart   ************************    */
+
+    .sim-cart {
+        position: fixed;
+        z-index: 10;
+        border: 1px solid rgb(50, 49, 49);
+        width: max-content;
+        height: max-content;
+        top: 140px;
+        left: 40px;
+        color: red;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 50px 1000px rgba(0, 0, 0, 0.527);
+        background-color: rgb(215, 216, 217);
+
+
+        >i {
+            font-size: 15px;
+            font-weight: 900;
+            position: absolute;
+            right: 10px;
+            color: black;
+        }
+
+        >h1 {
+            padding-top: 10px;
+            font-size: 23px;
+            font-family: var(--text-font-max);
+            color: black;
+
+        }
+
+        >p {
+            padding-top: 10px;
+            font-size: 18px;
+            font-family: var(--text-font-max);
+            color: rgb(68, 67, 67);
+        }
+
+
+    }
+
+
+
+
+
+
+
+    .on-off-sim-cart-attention {
+      display: none;
     }
 
 }

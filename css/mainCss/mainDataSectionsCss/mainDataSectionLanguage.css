@@ -25,4 +25,15 @@
             margin-top: 5px;
         }
     }
+
+
+
+
+    .m-d-section-click-language {
+        width:365px;
+        padding: 10px;
+        height: 5px;
+        background-color: aquamarine;
+       
+    }
 }
