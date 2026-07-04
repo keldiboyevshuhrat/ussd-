@@ -1,0 +1,352 @@
+
+    /* header qismi */
+    .commond-div {
+       
+        max-width: 366px;
+        height: auto;
+        margin-left: -1px;
+
+
+    }
+
+
+    header {
+        width: 366px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(45, 108, 87);
+        position: fixed;
+        top: 0;
+
+    }
+
+    .icon-header {
+        min-width: max-content;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        text-align: center;
+
+
+
+        >p {
+            color: rgb(255, 255, 255);
+            font-family: var(--text-font-max);
+            margin-top: 10px;
+            font-size: 24px;
+            margin-top: 5px;
+        }
+    }
+
+    .h-colgroup {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+
+        a {
+            width: max-content;
+            height: max-content;
+            padding: 3px;
+            background-color: rgb(212, 222, 222);
+            color: black;
+            margin-top: -5px;
+            border-radius: 100%;
+        }
+
+
+        a:nth-child(2) {
+            >i {
+                color: rgb(0, 162, 255);
+            }
+
+
+
+
+
+        }
+
+        a:nth-child(1) {
+            >i {
+                color: rgb(206, 79, 79);
+            }
+        }
+
+
+    }
+
+
+
+
+    /* nav qismi */
+
+
+    nav {
+        position: sticky;
+        top: 40px;
+        width: fit-content;
+        background-color: rgb(27, 21, 132);
+        height: max-content;
+    }
+
+    .componiya {
+        width: 364px;
+
+        top: 0;
+        min-height: max-content;
+
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0 10px 0;
+        overflow-x: scroll;
+        gap: 10px;
+
+        top: 40px;
+    }
+
+
+    .componiya-1 {
+
+        top: 0;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(255, 255, 255);
+        margin: 0 5px 0 5px;
+
+
+
+
+
+        >img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+
+
+        }
+    }
+
+
+
+    /*  main */
+
+    main {
+        width: 366px;
+        min-height: max-content;
+        background-color: rgb(255, 255, 255);
+        margin-top: 38px;
+        padding-bottom: 100px;
+
+    }
+
+    .main-data-section {
+        width: 80%;
+        min-height: max-content;
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-top: 15px;
+        margin: auto;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 20px;
+
+
+    }
+
+    .m-d-section-1 {
+        width: 110px;
+        height: 80px;
+        border-radius: 15px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: rgba(95, 95, 228, 0);
+
+
+        >i {
+            font-size: 30px;
+            margin-left: 35px;
+            margin-top: 10px;
+        }
+
+        >p {
+            font-size: 12px;
+            font-family: var(--text-font-max);
+            font-weight: 400;
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            text-align: center;
+            overflow-x: hidden;
+            margin-top: 5px;
+            background-color: rgba(0, 0, 255, 0);
+
+        }
+    }
+
+
+
+    .main-restart-section {
+        width: max-content;
+        height: max-content;
+        padding: 7px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        margin: auto;
+
+
+
+
+        >i {
+            font-size: 12px;
+        }
+
+        >p {
+            font-family: var(--text-font-min);
+            font-size: 12px;
+            font-weight: 600;
+            padding-left: 10px;
+
+        }
+    }
+
+
+    /* footer*/
+
+    footer {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(167, 167, 167);
+        position: fixed;
+        bottom: 0px;
+    }
+
+    .footer-info {
+        width: 363px;
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0 10px 0;
+        margin-left: 0;
+
+
+        color: red;
+
+
+        >.f-info:nth-of-type(3) {
+            width: 50px;
+            height: 50px;
+            color: red;
+            border: 5px solid rgb(255, 255, 255);
+            position: relative;
+            top: -35px;
+            padding: 5px;
+            border-radius: 100%;
+            background-color: rgb(54, 89, 119);
+
+
+            >i {
+                font-size: 30px;
+                margin-left: 6px;
+                margin-top: 8px;
+            }
+
+
+        }
+
+    }
+
+
+    .f-info {
+        width: 50px;
+        height: 40px;
+
+
+
+        >i {
+            font-size: 16px;
+            margin-left: 15px;
+            color: rgb(37, 37, 37);
+
+        }
+
+        >p {
+            font-size: 14px;
+            font-family: var(--text-font-max);
+            text-align: center;
+            font-weight: 400;
+            color: black;
+
+        }
+
+
+
+
+    }
+
+    /**      ******************  sim cart   ************************    */
+
+    .sim-cart {
+        position: fixed;
+        z-index: 10;
+        border: 1px solid rgb(50, 49, 49);
+        width: max-content;
+        height: max-content;
+        top: 140px;
+        left: 40px;
+        color: red;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 50px 1000px rgba(0, 0, 0, 0.527);
+        background-color: rgb(215, 216, 217);
+
+
+        >i {
+            font-size: 15px;
+            font-weight: 900;
+            position: absolute;
+            right: 10px;
+            color: black;
+        }
+
+        >h1 {
+            padding-top: 10px;
+            font-size: 23px;
+            font-family: var(--text-font-max);
+            color: black;
+
+        }
+
+        >p {
+            padding-top: 10px;
+            font-size: 18px;
+            font-family: var(--text-font-max);
+            color: rgb(68, 67, 67);
+        }
+
+
+    }
+
+
+
+
+
+
+
+    .on-off-sim-cart-attention {
+      display: none;
+    }
+
+
+ 
+
+

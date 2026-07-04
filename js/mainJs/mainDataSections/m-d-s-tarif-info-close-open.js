@@ -19,17 +19,18 @@ function tarifOchishYopish(fteg) {
 
 
 
-console.log( fteg.parentElement.style.height);
+    console.log(fteg.parentElement.style.height);
 
 
     m_d_s_t_1_icon.forEach((t) => {
         if (t.parentElement == fteg) {
 
             if (fteg.parentElement.style.height) {
-                t.style = `
-        transform: rotate(0deg);
-        
-        `
+                t.classList.replace("fa-solid", "fa-brands");
+                t.classList.replace("fa-right-to-bracket", "fa-stack-overflow");
+                t.style = "transform: rotate(0deg);"
+                // <i class="fa-brands fa-stack-overflow"></i>
+                // <i class="fa-solid fa-right-to-bracket"></i>
 
                 fteg.parentElement.style = `
         height : 60px;
@@ -40,11 +41,10 @@ console.log( fteg.parentElement.style.height);
                 fteg.parentElement.style.height = "";
 
             } else {
-                t.style = `
-        transform: rotate(50deg);
-        
+                t.classList.replace("fa-brands", "fa-solid");
+                t.classList.replace("fa-stack-overflow", "fa-right-to-bracket");
+                t.style = "transform: rotate(90deg);"
 
-        `
                 fteg.parentElement.style = `
         height : max-content;
         overflow: hidden;

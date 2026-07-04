@@ -23,7 +23,7 @@ switch (Number(getClickMeText)) {
     case 1:
 
         if (m_d_s_tariflar) {
-           tarifAll();
+            tarifAll();
 
         }
 
@@ -107,7 +107,7 @@ function tarifAll() {
             border-bottom: 2px solid ${getObjNew.colorNavB};
             `
             tarifAll2(item);
-
+            colorText();
         })
 
     })
@@ -138,8 +138,9 @@ function tarifAll() {
                     newDiv.classList.add("m-d-s-t", "border-black");
                     newDiv.innerHTML = `
             <div class="m-d-s-t-1 border-black" onclick="tarifOchishYopish(this)" >
-                <h3 class="border-black">${info2.tarifName}</h3>
-                <i class=" m_d_s_t_1_icon fa-brands fa-telegram"></i>
+                <h3 class="border-black color-texts">${info2.tarifName}</h3>
+                
+                <i class="m_d_s_t_1_icon fa-brands fa-stack-overflow"></i>
             </div>
             <div class="m-d-s-t-2 border-black">
                 <div class="m-d-s-c-m-2-text border-black">
@@ -169,7 +170,7 @@ function tarifAll() {
                 </div>
                 
 
-                <div class="m-d-s-t-2-exchange" onclick="somCartOnOff()">
+                <div class="m-d-s-t-2-exchange " style="background-color:${getObjNew.colorNavB}" onclick="somCartOnOff()">
                     <p>tarifni almashtirish </p>
                 </div >
             </div>
@@ -235,7 +236,7 @@ function infoAll(key) {
     document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
 
 
-       
+
 
 
         e.addEventListener("click", (item) => {
@@ -248,11 +249,11 @@ function infoAll(key) {
             color : ${getObjNew.colorNavB};
             border-bottom: 2px solid ${getObjNew.colorNavB};
             `
-           
+
 
 
             infoAll2(item);
-
+            colorText();
         })
 
     })
@@ -269,6 +270,7 @@ function infoAll(key) {
 
             typeof item == "string" ? tengEmas = item : tengEmas = item.currentTarget.textContent
 
+            console.log(info1);
 
             if (info1.period == tengEmas) {
                 console.log(item);
@@ -345,13 +347,13 @@ function aksiyaVaYAngiliklar(key) {
             clearColor();
 
 
-
             item.target.style = `
             transition: 1s;
             color : ${getObjNew.colorNavB};
             border-bottom: 2px solid ${getObjNew.colorNavB};
             `
             aksiyaVaYAngiliklar2(item)
+            colorText();
 
         })
 
@@ -433,7 +435,6 @@ function ussdAll(key) {
 
 
         e.addEventListener("click", (item) => {
-
             clearColor();
 
 
@@ -445,6 +446,7 @@ function ussdAll(key) {
             `
             ussdAll2(item);
 
+            colorText();
 
         })
 
@@ -471,27 +473,27 @@ function ussdAll(key) {
 
                 info1.Info.forEach((info2) => {
 
-
+                    console.log(info2 );
                     let newDiv = document.createElement("div");
                     newDiv.setAttribute("onclick", "somCartOnOff()");
                     newDiv.classList.add("m-d-s-ussdCode", "border-black");
                     newDiv.innerHTML = `
                    
                     <div class="m-d-s-ussdCode-1 border-black">
-                        <p class="m-d-s-c-m-1-value color-texts">100 mb</p>
+                        <p class="m-d-s-c-m-1-value color-texts">${info2.ussdCode}</p>
                     </div>
                     <div class="m-d-s-ussdCode-2 border-black">
                         <div class="m-d-s-ussdCode-2-text-1 border-black">
     
-                            <p>
-                                hisobni tekshirish
+                            <p class="color-texts">
+                                ${info2.menyu}
                             </p>
     
-                            <i class="fa-brands fa-telegram"></i>
+                            <i class="color-texts fa-solid fa-right-to-bracket"></i>
     
                         </div>
                         <div class="m-d-s-ussdCode-2-text-2 border-black">
-                            <p>ichtimoiy tarmoq uchun berilgan mb korish </p>
+                            <p>${info2.tafsif}</p>
     
                         </div>
     
@@ -547,20 +549,35 @@ function clearColor() {
 }
 
 
-let count = 0 ; 
+let count = 0;
 document.querySelectorAll(".m-d-s-c-nav p").forEach((e) => {
 
 
-   if(count == 0){
-    e.style = `
+    if (count == 0) {
+        e.style = `
     transition: 1s;
     color : ${getObjNew.colorNavB};
     border-bottom: 2px solid ${getObjNew.colorNavB};
     `
-    console.log(count);
-    console.log(e);
-    count++;
-   }
- 
+        console.log(count);
+        console.log(e);
+        count++;
+    }
+
 
 })
+
+
+
+
+
+colorText();
+function colorText() {
+
+    document.querySelectorAll(".color-texts").forEach((i) => {
+
+        i.style.color = getObjNew.colorNavB
+
+    })
+
+}
